@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
-import RobotControl.Controls
+control = Controls()
 
-MoveForward()
+control.MoveForward()
