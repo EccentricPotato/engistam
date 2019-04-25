@@ -26,8 +26,11 @@ def MoveRight():
         if(gy.value() > 2000):
             print(gy.value())
             break"""
-        wait_until_angle_changed_by(delta = 90)
+        gy.wait_until_angle_changed_by(delta = 90)
+        break
         sleep(0.01)
+
+
     tank_pair.off()
     sleep(5)
 
