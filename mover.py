@@ -20,20 +20,19 @@ def MoveRight():
     gy.mode = 'GYRO-ANG'
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
     tank_pair.on(left_speed=100, right_speed=-100)
-    while True:
-
-         break
-
-
     gy.wait_until_angle_changed_by(delta=90)
     tank_pair.off()
-    sleep(5)
+    sleep(0.5)
 
 
 def MoveLeft():
+    gy = GyroSensor()
+    gy.mode = 'GYRO-ANG'
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-    tank_pair.on_for_degrees(left_speed=-100, right_speed=100, degrees=300, brake=True, block=True)
-
+    tank_pair.on(left_speed=-100, right_speed=100)
+    gy.wait_until_angle_changed_by(delta=90)
+    tank_pair.off()
+    sleep(0.5)
 
 MoveForward()
 MoveRight()
