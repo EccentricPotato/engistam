@@ -3,8 +3,8 @@ from ev3dev2.motor import LargeMotor
 from ev3dev2.motor import SpeedDPS, SpeedRPM, SpeedRPS, SpeedDPM
 from time import sleep
 
-lm1 = LargeMotor("out B")
-lm2 = LargeMotor("out A")
+lm1 = LargeMotor(OUTPUT_B)
+lm2 = LargeMotor(OUTPUT_A)
 
 '''
 This will run the large motor at 50% of its
