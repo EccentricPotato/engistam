@@ -16,7 +16,7 @@ def MoveForward(steering = 0, speed = -40):
     steer_pair.on_for_seconds(steering, speed, seconds=1)
 
 def MoveRight():
-    gy = GyroSensor(address = ev3:in1)
+    gy = GyroSensor()
     gy.mode = 'GYRO-ANG'
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
     tank_pair.on(left_speed=100, right_speed=-100)
