@@ -6,10 +6,13 @@ from ev3dev2.motor import MediumMotor, MoveSteering, OUTPUT_A, OUTPUT_B
 from time import sleep
 
 
-def MoveForward(steering = 0, speed = 40):
+def MoveBackward(steering = 0, speed = 40):
     steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-    steer_pair.on_for_seconds(steering=0, speed=50, seconds=2)
+    steer_pair.on_for_seconds(steering, speed, seconds=2)
 
+def MoveForward(steering = 0, speed = -40):
+    steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
+    steer_pair.on_for_seconds(steering, speed, seconds=2)
 
 MoveForward()
 sleep(1)
