@@ -8,11 +8,12 @@ from time import sleep
 
 def MoveBackward(steering = 0, speed = 40):
     steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-    steer_pair.on_for_seconds(steering, speed, seconds=2)
+    steer_pair.on_for_seconds(steering, speed, seconds=1)
 
 def MoveForward(steering = 0, speed = -40):
     steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-    steer_pair.on_for_seconds(steering, speed, seconds=2)
+    steer_pair.on_for_seconds(steering, speed, seconds=1)
 
 MoveForward()
+MoveBackward()
 sleep(1)
