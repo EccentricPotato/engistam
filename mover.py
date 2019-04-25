@@ -18,20 +18,18 @@ def MoveForward(steering = 0, speed = -40):
 def MoveRight():
     gy = GyroSensor()
     gy.mode = 'GYRO-ANG'
+    #while True:
+    """
+    
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
     tank_pair.on(left_speed=100, right_speed=-100)
-
-    while True:
-        """print("The angle is:"+str(gy.value())+"\n")# while gyro sensor is not turned to 90 deg
+    print("The angle is:"+str(gy.value())+"\n")# while gyro sensor is not turned to 90 deg
         if(gy.value() > 2000):
             print(gy.value())
             break"""
-        gy.wait_until_angle_changed_by(delta = 90)
-        break
-        sleep(0.01)
-
-
-    tank_pair.off()
+    gy.wait_until_angle_changed_by(delta = 90)
+       # break
+    #tank_pair.off()
     sleep(5)
 
 
