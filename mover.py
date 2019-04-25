@@ -16,12 +16,12 @@ def MoveForward(steering = 0, speed = -40):
 
 def MoveRight():
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-    tank_pair.on_for_degrees(left_speed = 20, right_speed = 0, degrees = 90, brake=True, block=True)
+    tank_pair.on_for_degrees(left_speed = 100, right_speed = 0, degrees = 90, brake=True, block=True)
 
 
 def MoveLeft():
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-    tank_pair.on_for_degrees(left_speed=0, right_speed=20, degrees=90, brake=True, block=True)
+    tank_pair.on_for_degrees(left_speed=0, right_speed=100, degrees=90, brake=True, block=True)
 
 
 MoveForward()
