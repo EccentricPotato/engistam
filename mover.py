@@ -36,7 +36,3 @@ def MoveLeft():
 MoveForward()
 MoveRight()
 MoveLeft()
-"""sleep(1)
-tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-tank_pair.off()
-sleep(5)"""
