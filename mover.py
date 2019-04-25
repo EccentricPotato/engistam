@@ -2,15 +2,11 @@
 from ev3dev2.motor import LargeMotor
 from ev3dev2.motor import SpeedDPS, SpeedRPM, SpeedRPS, SpeedDPM
 from time import sleep
+from ev3dev2.motor import MediumMotor, MoveSteering, OUTPUT_A, OUTPUT_B
+from time import sleep
 
-lm1 = LargeMotor(OUTPUT_B)
-lm2 = LargeMotor(OUTPUT_A)
+steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
 
-'''
-This will run the large motor at 50% of its
-rated maximum speed of 1050 deg/s.
-50% x 1050 = 525 deg/s
-'''
-lm1.on_for_seconds(speed = 50, seconds=3)
-lm2.on_for_seconds(speed = 50, seconds=3)
+steer_pair.on_for_seconds(steering=0, speed=50, seconds=2)
+
 sleep(1)
