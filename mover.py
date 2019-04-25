@@ -18,11 +18,12 @@ def MoveForward(steering = 0, speed = -40):
 def MoveRight():
     gy = GyroSensor()
     gy.mode = 'GYRO-ANG'
+    tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
+    tank_pair.on(left_speed=100, right_speed=-100)
     #while True:
     """
     
-    tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-    tank_pair.on(left_speed=100, right_speed=-100)
+    
     print("The angle is:"+str(gy.value())+"\n")# while gyro sensor is not turned to 90 deg
         if(gy.value() > 2000):
             print(gy.value())
