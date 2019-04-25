@@ -22,7 +22,7 @@ def MoveRight():
     tank_pair.on(left_speed=100, right_speed=-100)
 
     while True:
-        print("The angle is:"+gy.value()+"\n")# while gyro sensor is not turned to 90 deg
+        print("The angle is:"+str(gy.value())+"\n")# while gyro sensor is not turned to 90 deg
         if(gy.value() > 2000):
             print(gy.value())
             break
