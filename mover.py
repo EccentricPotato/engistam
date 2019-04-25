@@ -21,8 +21,8 @@ def MoveRight():
     tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
     tank_pair.on(left_speed=100, right_speed=-100)
 
-    while gy.value() != 90:  # while gyro sensor is not turned to 90 deg
-        print(gy.value())
+    while gy.value() != 2000:  # while gyro sensor is not turned to 90 deg
+        
         sleep(0.01)
     tank_pair.off()
     sleep(5)
