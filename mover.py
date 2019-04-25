@@ -2,7 +2,7 @@
 from ev3dev2.motor import LargeMotor
 from ev3dev2.motor import SpeedDPS, SpeedRPM, SpeedRPS, SpeedDPM
 from time import sleep
-from ev3dev2.motor import MediumMotor, MoveSteering, OUTPUT_A, OUTPUT_B
+from ev3dev2.motor import MediumMotor, MoveSteering, MoveTank, OUTPUT_A, OUTPUT_B
 from time import sleep
 
 
