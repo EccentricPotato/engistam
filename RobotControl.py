@@ -16,7 +16,7 @@ class Controls:
 
     def MoveForward(self, steering=0, speed=-40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on_for_seconds(steering,speed, seconds=0.5)
+        steer_pair.on_for_seconds(steering,speed, seconds=0.01)
 
     def MoveRight(self):
         gy = GyroSensor()
