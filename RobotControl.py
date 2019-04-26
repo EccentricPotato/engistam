@@ -10,15 +10,15 @@ class Controls:
     def __init__(self):
         print("Starting...")
 
-    def MoveBackward(steering=0, speed=40):
+    def MoveBackward(self, steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on_for_seconds(steering, speed, seconds=1)
 
-    def MoveForward(steering=0, speed=-40):
+    def MoveForward(self, steering=0, speed=-40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on_for_seconds(steering, speed, seconds=1)
 
-    def MoveRight():
+    def MoveRight(self):
         gy = GyroSensor()
         gy.mode = 'GYRO-ANG'
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
@@ -27,7 +27,7 @@ class Controls:
         tank_pair.off()
         sleep(1)
 
-    def MoveLeft():
+    def MoveLeft(self):
         gy = GyroSensor()
         gy.mode = 'GYRO-ANG'
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
