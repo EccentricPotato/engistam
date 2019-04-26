@@ -24,6 +24,7 @@ def MovementFunction():
                 break
             else:
                 turn.MoveLeft()
+                control.is_drilled = False
         else:
             turn.MoveLeft()
             if dist.Measure() > wall:
