@@ -10,13 +10,13 @@ class Controls:
     def __init__(self):
         print("Starting...")
 
+    def Measure(self):
+        us = UltrasonicSensor()
+        return us.distance_centimeters
+
     def MoveBackward(self, steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on(speed, speed)
-
-    def MoveForward(self, steering=0, speed=-40):
-        steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on_for_seconds(steering,speed, seconds=0.01)
 
     def MoveRight(self):
         gy = GyroSensor()
@@ -36,9 +36,22 @@ class Controls:
         tank_pair.off()
         sleep(1)
 
-    def Measure(self):
-        us = UltrasonicSensor()
-        return us.distance_centimeters
+    def MoveForward(self, steering=0, speed=-20):
+        steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
+        steer_pair.on(speed, speed)
+        while True:
+            Measure()
+            if Measure() < 8:
+                steer_pair.off()
+                print ("I stop")
+                MoveLeft()
+                break
+
+
+
+
+
+
 
 
 
