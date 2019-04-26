@@ -11,8 +11,7 @@ class LeftRight:
         print("Turning...")
 
     def MoveLeft(self):
-        gy = GyroSensor()
-        gy.mode = 'GYRO-ANG'
+
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
         tank_pair.on_for_degrees(left_speed=-10, right_speed=10, degrees=265, brake=True, block=True)
 
@@ -20,8 +19,7 @@ class LeftRight:
         sleep(2)
 
     def MoveRight(self):
-        gy = GyroSensor()
-        gy.mode = 'GYRO-ANG'
+        
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
         tank_pair.on_for_degrees(left_speed = 10, right_speed = -10, degrees =265, brake=True, block=True)
 
