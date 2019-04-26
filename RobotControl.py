@@ -31,7 +31,6 @@ class ForwardMovement:
                 turn.MoveLeft()
                 break
             if drill.Drilling() == 1:
-                Sound.beep()
                 steer_pair.off()
                 print("drilling")
                 sleep(2)
