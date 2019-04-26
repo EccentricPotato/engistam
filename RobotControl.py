@@ -6,8 +6,6 @@ from time import sleep
 from ev3dev2.sensor.lego import GyroSensor
 
 class Controls:
-    def Controls(self):
-
 
     def MoveBackward(steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
