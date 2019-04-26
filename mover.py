@@ -16,10 +16,10 @@ wall = 8
 
 def MovementFunction():
     while True:
-        control.MoveForward()
-        turn = LeftRight()
         dist = Measuring()
+        turn = LeftRight()
         if dist.Measure() > wall:
+            control.MoveForward()
             break
         else:
             turn.MoveLeft()
