@@ -13,10 +13,10 @@ class Drill:
 
 
     def Drilling(self):
-        color = ColorSensor()
-        color.mode = 'COL-COLOR'
-        print(color.value)
-        return color.value
+        cl = ColorSensor()
+        cl.mode = 'COL-COLOR'
+        print(cl.color)
+        return cl.color
 
 
 
