@@ -15,7 +15,6 @@ class Drill:
     def Drilling(self):
         cl = ColorSensor()
         cl.mode = 'COL-COLOR'
-        print(cl.color)
         return cl.color
 
 

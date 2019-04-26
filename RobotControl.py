@@ -15,11 +15,11 @@ class ForwardMovement:
 
     def MoveBackward(self, steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on(speed, speed)
+        steer_pair.on_for_seconds(steering = 0,speed = 20, seconds=2, brake=True, block=True)
 
     def MoveForward(self, steering=0, speed=-20):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on(steering = 0, speed = -20)
+        steer_pair.on_for_seconds(steering = 0,SpeedRPM = 24, seconds=5, brake=True, block=True)
         while True:
             dist = Measuring()
             drill = Drill()
