@@ -7,6 +7,9 @@ from ev3dev2.sensor.lego import GyroSensor
 
 class Controls:
 
+    def __init__(self):
+        print("Starting...")
+
     def MoveBackward(steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on_for_seconds(steering, speed, seconds=1)
