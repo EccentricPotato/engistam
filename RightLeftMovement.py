@@ -13,7 +13,7 @@ class LeftRight:
     def MoveLeft(self):
 
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-        tank_pair.on_for_degrees(left_speed=-10, right_speed=10, degrees=160, brake=True, block=True)
+        tank_pair.on_for_degrees(left_speed=-10, right_speed=10, degrees=120, brake=True, block=True)
 
         tank_pair.off()
         sleep(2)
@@ -21,7 +21,7 @@ class LeftRight:
     def MoveRight(self):
 
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-        tank_pair.on_for_degrees(left_speed = 10, right_speed = -10, degrees =160, brake=True, block=True)
+        tank_pair.on_for_degrees(left_speed = 10, right_speed = -10, degrees =120, brake=True, block=True)
 
         tank_pair.off()
         sleep(2)
