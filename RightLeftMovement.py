@@ -23,7 +23,7 @@ class LeftRight:
         gy = GyroSensor()
         gy.mode = 'GYRO-ANG'
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
-        tank_pair.on_for_degrees(left_speed = 10, right_speed = -10, degrees =280, brake=True, block=True)
+        tank_pair.on_for_degrees(left_speed = 10, right_speed = -10, degrees =270, brake=True, block=True)
 
         tank_pair.off()
         sleep(2)
