@@ -19,7 +19,7 @@ class ForwardMovement:
 
     def MoveForward(self, steering=0, speed=-20):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on_for_seconds(steering = 0,SpeedRPM = 24, seconds=5, brake=True, block=True)
+        steer_pair.on_for_seconds(steering = 0,speed = SpeedRPM(24), seconds=5, brake=True, block=True)
         while True:
 
             drill = Drill()
