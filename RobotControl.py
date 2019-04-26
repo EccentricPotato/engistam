@@ -38,9 +38,7 @@ class Controls:
 
     def Measure(self):
         us = UltrasonicSensor()
-        while True:
-            print(us.distance_centimeters)
-            if SpeedRPM() == 0:
-                break
+        print(us.distance_centimeters)
+
 
 
