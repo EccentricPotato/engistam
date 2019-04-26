@@ -36,7 +36,7 @@ class ForwardMovement:
                 print("drilling")
                 sleep(2)
                 mm = MediumMotor(OUTPUT_D)
-                mm.on_for_seconds(speed=40, seconds=30)
+                mm.on_for_seconds(speed=40, seconds=10)
 
 
                 break
