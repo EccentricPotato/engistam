@@ -12,7 +12,7 @@ from RobotControl import *
 
 control = ForwardMovement()
 print("Starting...")
-wall = 8
+wall = 10
 
 def MovementFunction():
     while True:
