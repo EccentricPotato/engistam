@@ -19,7 +19,6 @@ def MovementFunction():
         control.MoveForward()
         turn = LeftRight()
         dist = Measuring()
-        turn.MoveRight()
         if dist.Measure() > wall:
             break
         else:
