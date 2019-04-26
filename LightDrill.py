@@ -9,7 +9,7 @@ from MeasureDistance import Measuring
 class Drill:
 
     def __init__(self):
-        print("")
+        print("What???")
 
 
     def Drilling(self):
