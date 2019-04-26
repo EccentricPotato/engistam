@@ -3,7 +3,7 @@ from ev3dev2.motor import SpeedDPS, SpeedRPM, SpeedRPS, SpeedDPM
 from time import sleep
 from ev3dev2.motor import MediumMotor, MoveSteering, MoveTank, OUTPUT_A, OUTPUT_B, OUTPUT_C
 from time import sleep
-from ev3dev2.sensor.lego import GyroSensor
+from ev3dev2.sensor.lego import GyroSensor , UltrasonicSensor
 
 class Controls:
 
@@ -35,3 +35,12 @@ class Controls:
         gy.wait_until_angle_changed_by(delta=90)
         tank_pair.off()
         sleep(1)
+
+    def Measure(self):
+        us = UltrasonicSensor()
+        while True:
+            print(us.distance_centimeters)
+            if SpeedRPM() == 0:
+                break
+
+

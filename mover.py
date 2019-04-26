@@ -3,3 +3,5 @@ from RobotControl import *
 
 control = Controls()
 control.MoveForward()
+control.Measure()
+
