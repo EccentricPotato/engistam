@@ -19,8 +19,11 @@ def MovementFunction():
         dist = Measuring()
         turn = LeftRight()
         if dist.Measure() > wall:
-            control.MoveForward()
-            break
+            if control.is_drilled == False:
+                control.MoveForward()
+                break
+            else:
+                turn.MoveLeft()
         else:
             turn.MoveLeft()
             if dist.Measure() > wall:
