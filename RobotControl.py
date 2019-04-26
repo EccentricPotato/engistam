@@ -21,15 +21,15 @@ class ForwardMovement:
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on_for_seconds(steering = 0,speed = -1*SpeedRPM(24), seconds=5, brake=True, block=True)
         while True:
-
             drill = Drill()
-
             if drill.Drilling() == 1:
                 steer_pair.off()
                 print("drilling")
                 sleep(2)
                 mm = MediumMotor(OUTPUT_D)
                 mm.on_for_seconds(speed=40, seconds=10)
+                break
+            else:
                 break
 
 
