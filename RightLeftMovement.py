@@ -25,8 +25,8 @@ class LeftRight:
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
         tank_pair.on(left_speed=-15, right_speed=15)
         while True:
-            gy.wait_until_angle_changed_by(delta=5)
-            counter = counter+5
+            gy.wait_until_angle_changed_by(delta=1)
+            counter = counter+1
             if(counter>=90):
                 break
 
