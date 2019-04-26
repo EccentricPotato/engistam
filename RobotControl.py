@@ -40,7 +40,6 @@ class Controls:
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on(speed, speed)
         while True:
-            Measure()
             if Measure() < 8:
                 steer_pair.off()
                 print ("I stop")
