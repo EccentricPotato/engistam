@@ -32,7 +32,7 @@ class ForwardMovement:
                 mm.on_for_seconds(speed=40, seconds=10)
 
         else:
-            steer_pair.on_for_seconds(steering=0, speed=-1 * SpeedRPM(15), seconds=1, brake=True, block=True)
+            steer_pair.on_for_seconds(steering=0, speed=-1 * SpeedRPM(12), seconds=1, brake=True, block=True)
 
 
 
