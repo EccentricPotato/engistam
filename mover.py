@@ -14,24 +14,26 @@ control = ForwardMovement()
 print("Starting...")
 wall = 8
 while True:
-    control.MoveForward()
-    turn = LeftRight()
-    dist = Measuring()
-    turn.MoveRight()
-    if dist.Measure()>wall:
-        break
-    else:
-        turn.MoveLeft()
-        if dist.Measure()>wall:
-             break
+    while True:
+        control.MoveForward()
+        turn = LeftRight()
+        dist = Measuring()
+        turn.MoveRight()
+        if dist.Measure() > wall:
+            control.MoveForward()
         else:
-            turn.MoveRight()
+            turn.MoveLeft()
             if dist.Measure() > wall:
                 break
             else:
                 turn.MoveRight()
-                turn.MoveRight()
-                break
+                if dist.Measure() > wall:
+                    break
+                else:
+                    turn.MoveRight()
+                    turn.MoveRight()
+                    break
+
 
 
 
