@@ -24,6 +24,7 @@ class ForwardMovement:
             print(dist.Measure())
             if dist.Measure() < 8:
                 steer_pair.off()
+                sleep(1)
                 print ("I stop")
                 turn = LeftRight()
                 turn.MoveLeft()
