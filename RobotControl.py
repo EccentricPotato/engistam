@@ -29,18 +29,11 @@ class ForwardMovement:
                 print("drilling")
                 sleep(2)
                 mm = MediumMotor(OUTPUT_D)
-                mm.on_for_seconds(speed=40, seconds=10)
+                sp = SpeedRPM(90)
+                time = 10
+                mm.on_for_seconds(speed=sp, seconds=time)
+
+                print("Number of rotations ="+str(sp/time))
 
         else:
             steer_pair.on_for_seconds(steering=0, speed=-1 * SpeedRPM(12), seconds=1, brake=True, block=True)
-
-
-
-
-
-
-
-
-
-
-
