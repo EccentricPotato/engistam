@@ -12,11 +12,11 @@ class Controls:
 
     def MoveBackward(self, steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on_for_seconds(steering, speed, seconds=1)
+        steer_pair.on(speed, speed)
 
     def MoveForward(self, steering=0, speed=-40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on_for_seconds(steering, speed, seconds=1)
+        steer_pair.on_for_seconds(steering,speed, seconds=0.5)
 
     def MoveRight(self):
         gy = GyroSensor()
@@ -38,7 +38,8 @@ class Controls:
 
     def Measure(self):
         us = UltrasonicSensor()
-        print(us.distance_centimeters)
+        return us.distance_centimeters
+
 
 
 

@@ -2,6 +2,12 @@
 from RobotControl import *
 
 control = Controls()
-control.MoveForward()
-control.Measure()
+while True:
+    control.Measure()
+    if control.Measure() < 8:
+         print ("I stop")
+         control.MoveLeft()
+    else:
+        control.MoveForward()
+
 
