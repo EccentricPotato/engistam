@@ -38,9 +38,11 @@ class Controls:
 
     def MoveForward(self, steering=0, speed=-20):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
-        steer_pair.on(speed, speed)
+        steer_pair.on(steering = 0, speed = -20)
         while True:
-            if Measure() < 8:
+            dist = Measure()
+            print(dist)
+            if dist < 8:
                 steer_pair.off()
                 print ("I stop")
                 MoveLeft()
