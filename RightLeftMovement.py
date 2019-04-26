@@ -25,5 +25,6 @@ class LeftRight:
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
         tank_pair.on(left_speed=-30, right_speed=30)
         gy.wait_until_angle_changed_by(delta=90)
+        print("dicks")
         tank_pair.off()
-        sleep(1)
+        sleep(10)
