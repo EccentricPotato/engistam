@@ -3,6 +3,9 @@ from RobotControl import *
 
 control = ForwardMovement()
 
-control.MoveForward()
+while True:
+    control.MoveForward()
+
+
 
 
