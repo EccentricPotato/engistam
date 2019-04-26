@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import engistam.RobotControl 
+from RobotControl import *
 control = Controls()
 
 control.MoveForward()
