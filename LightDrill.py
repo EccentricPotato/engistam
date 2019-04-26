@@ -9,12 +9,13 @@ from MeasureDistance import Measuring
 class Drill:
 
     def __init__(self):
-        print("Drilling")
+        print("")
 
 
     def Drilling(self):
         color = ColorSensor()
         color.mode = 'COL-COLOR'
+        print(color.value)
         return color.value
 
 

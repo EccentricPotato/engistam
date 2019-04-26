@@ -7,7 +7,7 @@ from ev3dev2.sensor.lego import GyroSensor , UltrasonicSensor
 
 class Measuring:
     def __init__(self):
-        print("Starting...")
+        print("")
 
     def Measure(self):
         us = UltrasonicSensor()
