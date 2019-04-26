@@ -24,6 +24,6 @@ class LeftRight:
         gy.mode = 'GYRO-ANG'
         tank_pair = MoveTank(OUTPUT_A, OUTPUT_B)
         tank_pair.on(left_speed=-15, right_speed=15)
-        gy.wait_until_angle_changed_by(delta=75)
+        gy.wait_until_angle_changed_by(delta=70)
         tank_pair.off()
         sleep(10)
