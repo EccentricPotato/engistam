@@ -21,15 +21,9 @@ class ForwardMovement:
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on_for_seconds(steering = 0,SpeedRPM = 24, seconds=5, brake=True, block=True)
         while True:
-            dist = Measuring()
+
             drill = Drill()
-            if dist.Measure() < 8:
-                steer_pair.off()
-                sleep(1)
-                print ("I stop")
-                turn = LeftRight()
-                turn.MoveLeft()
-                break
+
             if drill.Drilling() == 1:
                 steer_pair.off()
                 print("drilling")
