@@ -13,14 +13,15 @@ from RobotControl import *
 control = ForwardMovement()
 print("Starting...")
 wall = 8
-while True:
+
+def MovementFunction():
     while True:
         control.MoveForward()
         turn = LeftRight()
         dist = Measuring()
         turn.MoveRight()
         if dist.Measure() > wall:
-            control.MoveForward()
+            break
         else:
             turn.MoveLeft()
             if dist.Measure() > wall:
@@ -33,6 +34,8 @@ while True:
                     turn.MoveRight()
                     turn.MoveRight()
                     break
+while True:
+    MovementFunction()
 
 
 
