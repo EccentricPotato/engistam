@@ -4,15 +4,12 @@ from time import sleep
 from ev3dev2.motor import MediumMotor, MoveSteering, MoveTank, OUTPUT_A, OUTPUT_B, OUTPUT_C
 from time import sleep
 from ev3dev2.sensor.lego import GyroSensor , UltrasonicSensor
+from MeasureDistance import Measuring
 
 class Controls:
 
     def __init__(self):
         print("Starting...")
-
-    def Measure(self):
-        us = UltrasonicSensor()
-        return us.distance_centimeters
 
     def MoveBackward(self, steering=0, speed=40):
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
@@ -40,9 +37,9 @@ class Controls:
         steer_pair = MoveSteering(OUTPUT_A, OUTPUT_B, motor_class=LargeMotor)
         steer_pair.on(steering = 0, speed = -20)
         while True:
-            dist = Measure()
-            print(dist)
-            if dist < 8:
+            dist = Measuring()
+            print(dist.Measure())
+            if dist.Measure() < 8:
                 steer_pair.off()
                 print ("I stop")
                 MoveLeft()
